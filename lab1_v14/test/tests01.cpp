@@ -2,7 +2,7 @@
 #include "../task.h"
 
 
-TEST(test_01, basic_test_set) {
+TEST(test_01_lab1_v14, basic_test_set) {
     EXPECT_EQ(replaces("Привет, мое солнце!", 'е', 'а', 2), "Привет, моа солнце!");
     EXPECT_EQ(replaces("Привет, привет!", 'и', 'о', 1), "Провет, привет!");
     EXPECT_EQ(replaces("Привет, привет!", 'и', 'о', 0), "Привет, привет!");
@@ -11,7 +11,7 @@ TEST(test_01, basic_test_set) {
     EXPECT_EQ(replaces("abcabcabc", 'a', 'x', 4), "abcabcabc"); 
 }
 
-TEST(test_02, basic_test_set) {
+TEST(test_02_lab1_v14, basic_test_set) {
     EXPECT_EQ(replaces("", 'a', 'b', 1), ""); 
     EXPECT_EQ(replaces("aaaaaa", 'a', 'b', 1), "baaaaa"); 
     EXPECT_EQ(replaces("aaaaaa", 'a', 'b', 7), "aaaaaa"); 

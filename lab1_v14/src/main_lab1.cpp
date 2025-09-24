@@ -1,13 +1,13 @@
 # include "./task.h"
 
 int main(void){
-    string input;
-    char old_value;
-    char new_value;
+    string i;
+    char o;
+    char n;
     int a;
     cout<<"Введите целевую строку";
-    getline(cin, input);
+    getline(cin, i);
     cout<<"Что хотите заменить и на что хотите заменить?";
-    cin>>old_value>>new_value>>a;
-    cout<<replaces(input, old_value, new_value, a);
+    cin>>o>>n>>a;
+    cout<<replaces(i, o, n, a);
 }
