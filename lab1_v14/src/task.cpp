@@ -3,19 +3,19 @@
 
 using namespace std; //знаю, что так делать не стоит, но я точно где-нибудь потеряю std::
 
-string replaces(string s, char o, char n, int k) {
-    string r = s;
-    if (s.length() < k || k <= 0) {
-        return r;
-    }
-    int c = 0;
-    for (size_t i = 0; i < s.length(); ++i) {
-        if (s[i] == o) {
-            ++c;
-            if (c == k) {
-                r[i] = n;
+string replaces(string input, char old_value, char new_value, int n){
+    string output=input;
+    if (input.length()<n || n<=0){
+        return(output);
+    }else{
+        int count = 0;
+        for (size_t i=0; i<input.length(); i++){
+            if (input[i]==old_value){
+            count++;
+              if (count==n){
+                output[i]=new_value;
+              }
             }
         }
-    }
-    return r;
+    }return(output);
 }
