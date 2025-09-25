@@ -1,21 +1,21 @@
 # include <string>
 # include "./task.h"
 
-using namespace std; //знаю, что так делать не стоит, но я точно где-нибудь потеряю std::
+using namespace std;
 
-string replaces(string input, char old_value, char new_value, int n){
-    string output=input;
-    if (input.length()<n || n<=0){
-        return(output);
+string replaces(string s, char old_v, char new_v, int n){
+    string out=s;
+    if (s.length()<n || n<=0){
+        return(out);
     }else{
         int count = 0;
-        for (size_t i=0; i<input.length(); i++){
-            if (input[i]==old_value){
+        for (size_t i=0; i<s.length(); i++){
+            if (s[i]==old_v){
             count++;
               if (count==n){
-                output[i]=new_value;
+                out[i]=new_v;
               }
             }
         }
-    }return(output);
+    }return(out);
 }
